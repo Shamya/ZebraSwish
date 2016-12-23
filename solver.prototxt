@@ -1,0 +1,14 @@
+train_net: "net_train.prototxt"
+test_net: "net_test.prototxt"
+test_iter: 339 #one epoch
+test_interval: 1017 #once every 3 epochs
+base_lr: 0.00001
+lr_policy: "fixed" #Because Adam will adjust it via momentum anyway
+display: 113 #every third-epoch
+max_iter: 1017 #50850 #max number of training iterations; 150 epochs
+momentum: 0.9
+momentum2: 0.999
+snapshot: 1017 #snapshot once every 3 epochs
+snapshot_prefix: "snapshot/train"
+type: "Adam"
+solver_mode: GPU
